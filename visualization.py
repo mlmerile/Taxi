@@ -31,8 +31,9 @@ def plot_path( polylines, mymap ):
     :param l: list of polyline
     :param 2: the pygmaps map
     """
+    #remark : there is bug in lib pymaps : it change path....
     map( \
-    lambda path : mymap.addpath(path,"#00FF00"),
+    lambda path : mymap.addpath(list(path),"#00FF00"),
     polylines)
     
     
